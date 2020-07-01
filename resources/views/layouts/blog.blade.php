@@ -36,16 +36,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('blog.index') }}">Home</a>
+            <a class="nav-link" href="{{ route('blog.index') }}">@lang('Home')</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">@lang('About')</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post.html">Posts</a>
+            <a class="nav-link" href="post.html">@lang('Posts')</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">@lang('Contact')</a>
           </li>
         </ul>
       </div>

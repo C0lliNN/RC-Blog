@@ -9,11 +9,11 @@ Blog
 @endsection
 
 @section('heading-title')
-Awesome Blog
+@lang('Awesome Blog')
 @endsection
 
 @section('heading-subtitle')
-A brilliant way to keep yourself up to date
+@lang('A brilliant way to keep yourself up to date')
 @endsection
 
 @section('content')

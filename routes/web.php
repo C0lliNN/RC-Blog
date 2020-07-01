@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+  // Detecting Locale
+
+  if (env('APP_ENV', 'local') === 'local') {
+    App::setLocale('pt');
+  } else {
+    $data = Location::get(request()->ip());
+
+    if ($data->countryCode === 'BR' || $data->countryCode === 'BR') {
+      App::setLocale('pt');
+    }
+  }
   return view('blog.index');
 })->name('blog.index');
 
