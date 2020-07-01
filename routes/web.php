@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('location')->group(function () {
   Route::view('/', 'blog.index')->name('blog.index');
+  Route::view('/about', 'blog.about')->name('blog.about');
 });
 
 Auth::routes();

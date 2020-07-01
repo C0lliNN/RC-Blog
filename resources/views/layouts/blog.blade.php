@@ -39,7 +39,7 @@
             <a class="nav-link" href="{{ route('blog.index') }}">@lang('Home')</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">@lang('About')</a>
+            <a class="nav-link" href="{{ route('blog.about') }}">@lang('About')</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="post.html">@lang('Posts')</a>
