@@ -1,7 +1,7 @@
 @extends('layouts.blog')
 
 @section('title')
-Blog
+RC Blog
 @endsection
 
 @section('heading-image')

@@ -1,7 +1,7 @@
 @extends('layouts.blog')
 
 @section('title')
-Blog
+RC Blog - @lang('About')
 @endsection
 
 @section('heading-image')
@@ -15,7 +15,8 @@ Blog
 
 @section('content')
 <div class="col-lg-8 col-md-10 mx-auto">
-  <p>@lang('A Software Developer that loves apply his knowledge to solve problems, create powerful products and impact business/lives.')
+  <p>@lang('A Software Developer that loves apply his knowledge to solve problems, create powerful products and impact
+    business/lives.')
   </p>
   <p>@lang('I love to travel, meet new people and places. Beyond that, I also love to play video games.')</p>
 </div>

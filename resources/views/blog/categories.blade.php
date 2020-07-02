@@ -1,7 +1,7 @@
 @extends('layouts.blog')
 
 @section('title')
-Blog - @lang('Categories')
+RC Blog - @lang('Categories')
 @endsection
 
 @section('heading-image')
