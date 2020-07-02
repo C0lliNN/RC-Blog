@@ -20,5 +20,8 @@
   "Send": "Enviar",
   "Logout": "Sair",
   "Password": "Senha",
-  "Remember me": "Mantenha-me conectado"
+  "Remember me": "Mantenha-me conectado",
+  "Welcome": "Bem-vindo",
+  "Admin Panel": "Painel do Administrador",
+  "Users": "Usuários",
 }
