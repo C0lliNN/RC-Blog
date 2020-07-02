@@ -17,5 +17,8 @@
   "Email Address": "Endereço de Email",
   "Phone Number": "Telefone",
   "Message": "Mensagem",
-  "Send": "Enviar"
+  "Send": "Enviar",
+  "Logout": "Sair",
+  "Password": "Senha",
+  "Remember me": "Mantenha-me conectado"
 }
