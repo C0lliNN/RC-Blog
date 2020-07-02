@@ -45,7 +45,7 @@
             <a class="nav-link" href="{{ route('blog.categories') }}">@lang('Categories')</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">@lang('Contact')</a>
+            <a class="nav-link" href="{{ route('blog.contact') }}">@lang('Contact')</a>
           </li>
         </ul>
       </div>

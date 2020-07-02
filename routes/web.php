@@ -27,6 +27,7 @@ Route::middleware('location')->group(function () {
   Route::view('/categories', 'blog.categories', [
     'categories' => $categories
   ])->name('blog.categories');
+  ROute::view('/contact', 'blog.contact')->name('blog.contact');
 });
 
 Auth::routes();
