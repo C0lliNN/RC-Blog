@@ -11,7 +11,7 @@
     <a href="#" class="list-group-item">
       @lang('Posts')
     </a>
-    <a href="#" class="list-group-item">
+    <a href="{{ route('categories.index') }}" class="list-group-item">
       @lang('Categories')
     </a>
   </div>

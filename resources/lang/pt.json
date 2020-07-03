@@ -24,4 +24,8 @@
   "Welcome": "Bem-vindo",
   "Admin Panel": "Painel do Administrador",
   "Users": "Usuários",
+  "New": "Novo",
+  "Edit": "Editar",
+  "Delete": "Excluir",
+  "This Category cannot be deleted": "Essa Categoria não pode ser excluída"
 }
