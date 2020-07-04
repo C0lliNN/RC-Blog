@@ -35,9 +35,13 @@
             </div>
             @else
             <div data-toggle="tooltip" data-placement="top" title="@lang('Delete')">
-              <a class="text-danger" href="{{ route('categories.destroy', $category->id) }}">
-                <i data-feather="trash-2"></i>
-              </a>
+              <form action="{{ route('categories.destroy', $category) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="text-danger" style="background-color: transparent; outline: none; border: none">
+                  <i data-feather="trash-2"></i>
+                </button>
+              </form>
             </div>
             @endif
           </div>

@@ -51,16 +51,6 @@ class CategoriesController extends Controller {
   }
 
   /**
-   * Display the specified resource.
-   *
-   * @param  \App\Category  $category
-   * @return \Illuminate\Http\Response
-   */
-  public function show(Category $category) {
-    //
-  }
-
-  /**
    * Show the form for editing the specified resource.
    *
    * @param  \App\Category  $category
@@ -95,6 +85,9 @@ class CategoriesController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy(Category $category) {
-    //
+    $category->delete();
+    return redirect()
+      ->route('categories.index')
+      ->with('alert', ['success', 'Category deleted successfully']);
   }
 }

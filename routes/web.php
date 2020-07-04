@@ -46,7 +46,7 @@ Route::middleware('location')->group(function () {
         'categories' => Category::all(),
         'posts' => collect([1, 2, 3, 4])
       ])->name('admin.dashboard');
-      Route::resource('/categories', 'CategoriesController');
+      Route::resource('/categories', 'CategoriesController')->except(['show']);
     });
 });
 
