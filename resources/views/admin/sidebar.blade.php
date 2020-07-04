@@ -8,7 +8,7 @@
       @lang('Users')
     </a>
     @endif
-    <a href="#" class="list-group-item">
+    <a href="{{ route('posts.index') }}" class="list-group-item">
       @lang('Posts')
     </a>
     <a href="{{ route('categories.index') }}" class="list-group-item">
