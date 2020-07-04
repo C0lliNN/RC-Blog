@@ -41,6 +41,19 @@
     </div>
   </header>
 
+  @if (session()->has('alert'))
+
+  <div class="container mt-5">
+    <div class="alert alert-{{ session()->get('alert')[0] }} alert-dismissible fade show" role="alert">
+      {{ session()->get('alert')[1] }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  @endif
+
+
   <div class="container mt-5">
     <div class="row justify-content-center">
       @yield('content')

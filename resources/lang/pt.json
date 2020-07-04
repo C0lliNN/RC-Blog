@@ -25,7 +25,12 @@
   "Admin Panel": "Painel do Administrador",
   "Users": "Usuários",
   "New": "Novo",
+  "Create": "Criar",
+  "New Category": "Nova Categoria",
+  "Category Name": "Nome da Categoria",
   "Edit": "Editar",
+  "Edit Category": "Editar Categoria",
+  "Update": "Atualizar",
   "Delete": "Excluir",
   "This Category cannot be deleted": "Essa Categoria não pode ser excluída"
 }

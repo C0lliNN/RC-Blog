@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\HandleCategoryRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Str;
 
 class CategoriesController extends Controller {
   /**
@@ -15,7 +17,9 @@ class CategoriesController extends Controller {
   public function index() {
     $locale = App::getLocale();
 
-    $categories = Category::paginate(10)->where('locale', $locale);
+    $categories = Category::query()
+      ->where('locale', $locale)
+      ->paginate(10);
 
     return view('admin.categories.index', ['categories' => $categories]);
   }
@@ -26,7 +30,7 @@ class CategoriesController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function create() {
-    //
+    return view('admin.categories.form');
   }
 
   /**
@@ -35,8 +39,15 @@ class CategoriesController extends Controller {
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request) {
-    //
+  public function store(HandleCategoryRequest $request) {
+    Category::create([
+      'name' => $request->name,
+      'slug' => Str::slug($request->name),
+      'locale' => App::getLocale()
+    ]);
+    return redirect()
+      ->route('categories.index')
+      ->with('alert', ['success', 'Category Created Successfully!']);
   }
 
   /**
@@ -56,7 +67,7 @@ class CategoriesController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function edit(Category $category) {
-    //
+    return view('admin.categories.form', ['category' => $category]);
   }
 
   /**
@@ -66,8 +77,15 @@ class CategoriesController extends Controller {
    * @param  \App\Category  $category
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Category $category) {
-    //
+  public function update(HandleCategoryRequest $request, Category $category) {
+    $category->update([
+      'name' => $request->name,
+      'slug' => Str::slug($request->name),
+      'locale' => App::getLocale()
+    ]);
+    return redirect()
+      ->route('categories.index')
+      ->with('alert', ['info', 'Category updated successfully']);
   }
 
   /**

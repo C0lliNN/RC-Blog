@@ -22,7 +22,7 @@
           <div>{{ $category->name }}</div>
           <div class="d-flex justify-content-center align-items-center">
             <div class="mx-2" data-toggle="tooltip" data-placement="top" title="@lang('Edit')">
-              <a class="text-primary" href="{{ route('categories.edit', $category->id) }}">
+              <a class="text-primary" href="{{ route('categories.edit', $category) }}">
                 <i data-feather="edit-2"></i>
               </a>
             </div>
