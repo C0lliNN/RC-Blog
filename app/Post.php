@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Post extends Model {
   protected $fillable = [
@@ -30,5 +32,9 @@ class Post extends Model {
 
   public function getRouteKeyName() {
     return 'slug';
+  }
+
+  public function deleteImage() {
+    Storage::delete(Str::substr($this->headingImage, 8));
   }
 }

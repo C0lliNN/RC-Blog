@@ -35,5 +35,16 @@
   "This Category cannot be deleted": "Essa Categoria não pode ser excluída",
   "Category Created Successfully!": "Categoria criada com sucesso!",
   "Category deleted successfully": "Categoria excluída com sucesso!",
-  "Category updated successfully": "Categoria atualizada com sucesso!"
+  "Category updated successfully": "Categoria atualizada com sucesso!",
+  "New Post": "Nova Postagem",
+  "Edit Post": "Editar Postagem",
+  "Title": "Título",
+  "Post Title": "Título da Postagem",
+  "Description": "Descrição",
+  "Post Description": "Descrição da Postagem",
+  "Content": "Conteúdo",
+  "Select the Heading Image": "Selecione a Imagem de Cabeçalho",
+  "Category": "Categoria",
+  "Post Updated Successfully!": "Postagem atualizada com sucesso!",
+  "Post Created Successfully!": "Postagem criada com sucesso!"
 }
