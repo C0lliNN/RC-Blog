@@ -6,7 +6,6 @@ use App\Category;
 use App\Http\Requests\CreatePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Post;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -130,6 +129,11 @@ class PostsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy(Post $post) {
-    //
+    $post->deleteImage();
+    $post->delete();
+
+    return redirect()
+      ->route('posts.index')
+      ->with('alert', ['success', 'Post Deleted Successfully!']);
   }
 }
