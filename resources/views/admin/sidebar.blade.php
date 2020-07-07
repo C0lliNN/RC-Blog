@@ -3,11 +3,9 @@
     <a href="{{ route('admin.dashboard') }}" class="list-group-item">
       @lang('Dashboard')
     </a>
-    @if (Auth::user()->isSuperAdmin)
-    <a href="#" class="list-group-item">
+    <a href="{{ route('users.index') }}" class="list-group-item">
       @lang('Users')
     </a>
-    @endif
     <a href="{{ route('posts.index') }}" class="list-group-item">
       @lang('Posts')
     </a>

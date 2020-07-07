@@ -37,6 +37,7 @@ Route::middleware('location')->group(function () {
       Route::get('/dashboard', 'DashboardController')->name('admin.dashboard');
       Route::resource('/categories', 'CategoriesController')->except(['show']);
       Route::resource('/posts', 'PostsController')->except(['show']);
+      Route::resource('/users', 'UsersController')->except(['show']);
     });
 });
 
