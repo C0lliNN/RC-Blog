@@ -47,5 +47,13 @@
   "Category": "Categoria",
   "Post Updated Successfully!": "Postagem atualizada com sucesso!",
   "Post Created Successfully!": "Postagem criada com sucesso!",
-  "Post Deleted Successfully!": "Postagem excluída com sucesso!"
+  "Post Deleted Successfully!": "Postagem excluída com sucesso!",
+  "New User": "Novo Usuário",
+  "User Name": "Nome do Usuário",
+  "User Email": "Email do Usuário",
+  "Enter your Password": "Informe sua Senha",
+  "Confirm Password": "Confirme a Senha",
+  "Enter your Password again": "Informe sua senha novamente",
+  "The passwords don't match.": "As senhas não coincidem",
+  "User Created Successfully!": "Usuário criado com sucesso!"
 }

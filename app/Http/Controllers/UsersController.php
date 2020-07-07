@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateUserRequest;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class UsersController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function create() {
-    //
+    return view('admin.users.form');
   }
 
   /**
@@ -30,8 +31,17 @@ class UsersController extends Controller {
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request) {
-    //
+  public function store(CreateUserRequest $request) {
+    User::create([
+      'name' => $request->name,
+      'email' => $request->email,
+      'password' => $request->password,
+      'isSuperAdmin' => false
+    ]);
+
+    return redirect()
+      ->route('users.index')
+      ->with('alert', ['success', 'User Created Successfully!']);
   }
 
   /**
