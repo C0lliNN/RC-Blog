@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Requests\HandleCategoryRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class CategoriesController extends Controller {
@@ -21,7 +22,11 @@ class CategoriesController extends Controller {
       ->where('locale', $locale)
       ->paginate(10);
 
-    return view('admin.categories.index', ['categories' => $categories]);
+    if (Auth::check()) {
+      return view('admin.categories.index', ['categories' => $categories]);
+    } else {
+      return view('blog.categories', ['categories' => $categories]);
+    }
   }
 
   /**
