@@ -20,6 +20,7 @@ RC Blog
 <div class="col-lg-8 col-md-10 mx-auto">
   @foreach ($posts as $post)
   <div class="post-preview">
+    <a href="{{ route('blog.post', $post) }}">
       <h2 class="post-title">
         {{ $post->title }}
       </h2>

@@ -75,7 +75,7 @@ class PostsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show(Post $post) {
-    //
+    return view('blog.post', ['post' => $post]);
   }
 
   /**
