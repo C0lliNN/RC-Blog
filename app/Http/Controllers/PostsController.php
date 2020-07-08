@@ -19,11 +19,13 @@ class PostsController extends Controller {
   public function index() {
     $locale = App::getLocale();
 
-    $posts = Post::query()
-      ->where('locale', $locale)
-      ->paginate(10);
+    $posts = Post::query()->where('locale', $locale);
 
-    return view('admin.posts.index', ['posts' => $posts]);
+    if (Auth::check()) {
+      return view('admin.posts.index', ['posts' => $posts->paginate(10)]);
+    } else {
+      return view('blog.index', ['posts' => $posts->simplePaginate(4)]);
+    }
   }
 
   /**
