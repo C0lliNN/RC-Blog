@@ -55,5 +55,6 @@
   "Confirm Password": "Confirme a Senha",
   "Enter your Password again": "Informe sua senha novamente",
   "The passwords don't match.": "As senhas não coincidem",
-  "User Created Successfully!": "Usuário criado com sucesso!"
+  "User Created Successfully!": "Usuário criado com sucesso!",
+  "User Deleted Successfully!": "Usuário excluído com sucesso!"
 }

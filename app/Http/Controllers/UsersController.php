@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateUserRequest;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller {
   /**
@@ -82,6 +83,13 @@ class UsersController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy(User $user) {
-    //
+    if (Auth::user()->isSuperAdmin) {
+      $user->delete();
+      return redirect()
+        ->route('users.index')
+        ->with('alert', ['success', 'User Deleted Successfully!']);
+    } else {
+      return redirect() - back(401);
+    }
   }
 }
