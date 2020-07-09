@@ -40,6 +40,9 @@
         </li>
         @endforeach
       </ul>
+      <div class="mt-3 d-flex justify-content-center">
+        {{ $posts->links() }}
+      </div>
     </div>
   </div>
 </div>
