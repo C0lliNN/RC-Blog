@@ -29,6 +29,13 @@ class CategoriesController extends Controller {
     }
   }
 
+  public function posts(Category $category) {
+    return view('blog.category_posts', [
+      'category' => $category,
+      'posts' => $category->posts()->simplePaginate(5)
+    ]);
+  }
+
   /**
    * Show the form for creating a new resource.
    *

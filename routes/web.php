@@ -21,6 +21,10 @@ Route::middleware('location')->group(function () {
     Route::get('/categories', 'CategoriesController@index')->name(
       'blog.categories'
     );
+    Route::get(
+      '/categories/{category}/posts',
+      'CategoriesController@posts'
+    )->name('blog.categories.posts');
 
     Route::view('/contact', 'blog.contact')->name('blog.contact');
   });

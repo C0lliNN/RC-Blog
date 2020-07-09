@@ -21,7 +21,7 @@ RC Blog - @lang('Categories')
   <ul class="list-group">
     @foreach ($categories as $category)
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <a href="#" class="text-decoration-none">{{ $category['name'] }}</a>
+      <a href="{{ route('blog.categories.posts', $category) }}" class="text-decoration-none">{{ $category['name'] }}</a>
       <span class="badge badge-secondary">{{ $category['posts']->count() }}</span>
     </li>
     @endforeach
