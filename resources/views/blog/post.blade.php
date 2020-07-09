@@ -56,5 +56,11 @@ RC Blog
 @section('content')
 <div class="col-lg-8 col-md-10 mx-auto">
   {!! $post->content !!}
+  <p>
+    @lang('Category'):
+    <a target="_blank" href="{{ route('blog.categories.posts', $post->category) }}">
+      {{ $post->category->name }}
+    </a>
+  </p>
 </div>
 @endsection
