@@ -47,6 +47,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('blog.contact') }}">@lang('Contact')</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">@lang('Login')</a>
+          </li>
         </ul>
       </div>
     </div>
