@@ -25,6 +25,11 @@ RC Blog
     font-family: Lora, 'Times New Roman', serif !important;
     font-style: italic !important;
   }
+
+  img {
+    display: block;
+    width: 100%;
+  }
 </style>
 
 @section('heading-image')
