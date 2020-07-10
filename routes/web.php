@@ -27,6 +27,7 @@ Route::middleware('location')->group(function () {
     )->name('blog.categories.posts');
 
     Route::view('/contact', 'blog.contact')->name('blog.contact');
+    Route::post('/contact', 'ContactController')->name('blog.contact');
   });
   Auth::routes([
     'register' => false,
