@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 use Illuminate\Support\Facades\App;
+use Stevebauman\Location\Facades\Location;
 
 use Closure;
 
@@ -21,8 +22,10 @@ class IdentifyLocationMiddleware {
     } else {
       $data = Location::get(request()->ip());
 
-      if ($data->countryCode === 'BR') {
-        App::setLocale('pt');
+      if ($data) {
+        if ($data->countryCode === 'BR') {
+          App::setLocale('pt');
+        }
       }
     }
     return $next($request);
