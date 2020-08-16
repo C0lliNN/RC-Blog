@@ -21,7 +21,7 @@ class IdentifyLocationMiddleware {
     } else {
       $data = Location::get(request()->ip());
 
-      if ($data->countryCode === 'BR' || $data->countryCode === 'BR') {
+      if ($data->countryCode === 'BR') {
         App::setLocale('pt');
       }
     }
