@@ -17,7 +17,7 @@ class IdentifyLocationMiddleware {
     // Detecting Locale
 
     if (env('APP_ENV', 'local') === 'local') {
-      App::setLocale('pt');
+      App::setLocale('en');
     } else {
       $data = Location::get(request()->ip());
 
